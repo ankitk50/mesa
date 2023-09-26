@@ -21,27 +21,32 @@ discuss via `Matrix`_ OR via `an issue`_.
 .. _`Matrix`: https://matrix.to/#/#project-mesa:matrix.org`
 .. _`an issue` : https://github.com/projectmesa/mesa/issues
 
-**To submit a contribution**
+**Your First Commit to Mesa**
 
-- Create a ticket for the item that you are working on.
-- Fork the Mesa repository.
+- Identify an existing issue or `Create a new issue`_ you want to work on.
+- `Fork`_ the Mesa repository.
 - `Clone your repository`_ from Github to your machine.
-- Create a new branch in your fork: ``git checkout -b BRANCH_NAME``
+- Add upstream config ``git remote add upstream https://github.com/projectmesa/mesa.git``
 - Run ``git config pull.rebase true``. This prevents messy merge commits when updating your branch on top of Mesa main branch.
+- Create a new branch in your fork: ``git checkout -b <BRANCH_NAME>``
 - Install an editable version with developer requirements locally: ``pip install -e ".[dev]"``
-- Edit the code. Save.
-- Git add the new files and files with changes: ``git add FILE_NAME``
-- Git commit your changes with a meaningful message: ``git commit -m "Fix issue X"``
+- Edit the code, Save and Test.
 - If implementing a new feature, include some documentation in docs folder.
+- Git add the new files and files with changes: ``git add <FILE_NAME>``
+- Git commit your changes with a meaningful message: ``git commit -m "Fix issue X"``
 - Make sure that your submission works with a few of the examples in the examples repository. If adding a new feature to mesa, please illustrate usage by implementing it in an example.
+se illustrate usage by implementing it in an example.
 - Make sure that your submission passes the `GH Actions build`_. See "Testing and Standards below" to be able to run these locally.
 - Make sure that your code is formatted according to `the black`_ standard (you can do it via `pre-commit`_).
 - Push your changes to your fork on Github: ``git push origin NAME_OF_BRANCH``.
 - `Create a pull request`_.
-- Describe the change w/ ticket number(s) that the code fixes.
+- Describe the change w/ issue number(s) that the code fixes.
 - Format your commit message as per `Tim Pope's guideline`_.
 
+
 .. _`Clone your repository` : https://help.github.com/articles/cloning-a-repository/
+.. _`Create a new issue` : https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue#
+.. _`Fork` : https://docs.github.com/en/get-started/quickstart/fork-a-repo
 .. _`GH Actions build` : https://github.com/projectmesa/mesa/actions/workflows/build_lint.yml
 .. _`Create a pull request` : https://help.github.com/articles/creating-a-pull-request/
 .. _`pre-commit` : https://github.com/pre-commit/pre-commit
